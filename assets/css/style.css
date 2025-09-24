@@ -7,7 +7,7 @@
 
 /* global styles */
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins&display=swap");
 
 body {
     font-family: "Poppins", sans-serif;
@@ -18,6 +18,11 @@ h1,
 h2 {
     font-family: "DM Serif Display", serif;
     color: #184f63; /* dark-blue */
+}
+
+.sharp-corners,
+.sharp-corners * {
+    border-radius: 0;
 }
 
 /* About section */
@@ -32,6 +37,17 @@ h2 {
     background-color: #dbdcde; /* light grey */
 }
 
+#portfolio .card-title {
+    color: #1f7798; /* mid-blue */
+}
+
+#portfolio .btn-outline-secondary:hover {
+    background-color: #1f7798; /* mid-blue */
+}
+
+#portfolio .card-text {
+    min-height: 120px;
+}
 /* Contact section */
 
 #contact {
@@ -47,4 +63,14 @@ h2 {
     background-position: 50% 70%;
     min-height: 500px;
     padding: 5% 7%;
+}
+
+/* Media queries */
+
+/* Use Bootstrap breakpoint for XL screens */
+@media screen and (min-width: 1200px) {
+    /* Fixes all portfolio cards being too tall on xl screens */
+    #portfolio .card-text {
+        min-height: auto;
+    }
 }
